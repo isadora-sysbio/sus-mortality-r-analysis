@@ -1,0 +1,3 @@
+method,n,mean_mg_dl,variance,sd_mg_dl,cv_percent,iqr_mg_dl
+Method A,8,205,388.57,19.71,9.62,23.25
+Method B,8,201.38,13.41,3.66,1.82,4.75
