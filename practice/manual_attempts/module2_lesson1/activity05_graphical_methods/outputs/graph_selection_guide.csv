@@ -1,0 +1,4 @@
+research_question,variable_structure,recommended_graph
+How frequent is each category?,One categorical variable,Bar chart
+How does a numeric variable differ between groups?,One numeric + one categorical grouping variable,Boxplot
+What is the shape of one numeric distribution?,One numeric variable,Histogram
