@@ -1,0 +1,2 @@
+n,sample_mean_g,reference_mean_g,mean_difference_g,t_statistic,df,p_value,ci_lower_g,ci_upper_g,alpha,decision,interpretation
+20,3166.9,3200,-33.09999999999991,-0.33239602959312753,19,0.7432294368755854,2958.4766434222556,3375.323356577744,0.05,Do not reject H0,Insufficient evidence that the population mean differs from 3200 g

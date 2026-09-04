@@ -1,0 +1,2 @@
+reference_mean_g,ci_lower_g,ci_upper_g,reference_inside_95_ci,p_value,reject_at_0_05
+3200,2958.4766434222556,3375.323356577744,TRUE,0.7432294368755854,FALSE
