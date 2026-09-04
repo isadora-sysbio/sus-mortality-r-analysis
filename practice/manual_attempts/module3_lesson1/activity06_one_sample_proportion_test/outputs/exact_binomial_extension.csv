@@ -1,0 +1,2 @@
+method,observed_proportion,reference_proportion,p_value,ci_lower,ci_upper
+Exact binomial test,0.3,0.25,0.10297644047580307,0.23738964407544683,0.3686498754590013

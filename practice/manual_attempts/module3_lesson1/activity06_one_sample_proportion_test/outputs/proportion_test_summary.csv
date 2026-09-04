@@ -1,0 +1,2 @@
+sample_size,hypertensive,observed_proportion,reference_proportion,absolute_difference,chi_squared,df,p_value,ci_lower,ci_upper,alpha,decision,interpretation
+200,60,0.3,0.25,0.04999999999999999,2.4066666666666667,1,0.12081938653567093,0.23844234740066747,0.36938918245683594,0.05,Do not reject H0,Insufficient evidence that hypertension prevalence differs from 25%

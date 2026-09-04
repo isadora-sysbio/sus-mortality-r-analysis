@@ -1,0 +1,2 @@
+reference_proportion,ci_lower,ci_upper,reference_inside_95_ci,p_value,reject_at_0_05
+0.25,0.23844234740066747,0.36938918245683594,TRUE,0.12081938653567093,FALSE

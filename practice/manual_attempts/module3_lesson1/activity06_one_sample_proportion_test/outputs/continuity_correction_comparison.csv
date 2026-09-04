@@ -1,0 +1,3 @@
+method,correction,chi_squared,p_value
+prop.test() with continuity correction,TRUE,2.4066666666666667,0.12081938653567093
+prop.test() without continuity correction,FALSE,2.6666666666666665,0.10247043485974931
