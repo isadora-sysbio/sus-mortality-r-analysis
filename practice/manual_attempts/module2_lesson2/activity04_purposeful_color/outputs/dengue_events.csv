@@ -1,0 +1,9 @@
+outcome,period,irr
+Hemorrhagic stroke,Days 1–7,10.9
+Ischemic stroke,Days 1–7,15.56
+Acute myocardial infarction,Days 1–7,13.53
+Heart failure,Days 1–7,27.24
+Hemorrhagic stroke,Days 8–14,4.33
+Ischemic stroke,Days 8–14,3.17
+Acute myocardial infarction,Days 8–14,1.16
+Heart failure,Days 8–14,2.45

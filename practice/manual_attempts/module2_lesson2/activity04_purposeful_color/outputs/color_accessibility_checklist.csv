@@ -1,0 +1,7 @@
+question,good_practice
+Does color encode a real variable?,Use color only when it carries meaning
+Can the figure still be interpreted without perfect color vision?,"Add shape, position, labels, or other redundant encoding when useful"
+Are text labels / legends present?,Never rely on unexplained color alone
+Could red-green alone create ambiguity?,Avoid red-green-only distinctions
+Is the palette appropriate to data type?,Discrete for categories; sequential for ordered magnitude
+Is contrast sufficient?,Check readability on light/dark and printed backgrounds

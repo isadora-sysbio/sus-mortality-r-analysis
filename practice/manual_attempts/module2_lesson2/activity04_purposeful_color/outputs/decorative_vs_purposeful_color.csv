@@ -1,0 +1,3 @@
+design_choice,result
+One arbitrary color per bar/category,Adds visual complexity without new information
+One purposeful color per meaningful group,Encodes a real variable or analytical distinction
