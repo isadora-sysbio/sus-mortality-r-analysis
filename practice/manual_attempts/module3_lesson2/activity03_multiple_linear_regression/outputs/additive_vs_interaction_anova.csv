@@ -1,0 +1,3 @@
+term,df.residual,rss,df,sumsq,statistic,p.value
+pa ~ idade + sexo,27,3658.295934798388,NA,NA,NA,NA
+pa ~ idade * sexo,26,3658.004313648153,1,0.29162115023473234,0.0020727558679506613,0.9640347170001116

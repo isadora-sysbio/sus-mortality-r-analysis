@@ -1,0 +1,4 @@
+term,meaning
+idade,Age effect adjusted for sex in the additive model
+sexoMasculino,Male-vs-female difference at the same age in the additive model
+idade:sexoMasculino,Change in the age slope for males relative to females in the interaction model
