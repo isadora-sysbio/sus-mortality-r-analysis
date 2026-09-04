@@ -1,0 +1,3 @@
+graph_type,zero_baseline_guidance
+Bar chart,Usually essential because bar length itself encodes magnitude
+Line chart,"Context-dependent; the Fiocruz example includes zero, but line charts do not universally require a zero baseline"

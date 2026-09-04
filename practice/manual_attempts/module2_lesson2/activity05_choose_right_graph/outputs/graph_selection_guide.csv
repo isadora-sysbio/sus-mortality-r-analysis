@@ -1,0 +1,7 @@
+analytical_goal,typical_graph,main_visual_encoding
+Compare category magnitudes,Bar chart,Length
+Show category composition,Pie chart only when composition is simple and labels are explicit,Angle / area
+Show change over ordered time,Line chart,Position + connected temporal path
+Show one numeric distribution,Histogram,Count/density across numeric bins
+Compare a numeric distribution across groups,Boxplot,"Median, quartiles and spread"
+Show relationship between two numeric variables,Scatter plot,Position on x and y
