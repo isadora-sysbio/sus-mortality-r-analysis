@@ -1,0 +1,2 @@
+n,pearson_r,direction,strength,t_statistic,df,p_value,ci_lower,ci_upper,significance
+30,0.659666599833984,Positive,Moderate,4.6445195769606995,28,7.326970877394942e-5,0.39273345765853956,0.8240856312780098,Statistically significant

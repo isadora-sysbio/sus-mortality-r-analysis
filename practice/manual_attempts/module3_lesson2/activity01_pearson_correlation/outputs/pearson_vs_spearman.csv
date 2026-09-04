@@ -1,0 +1,3 @@
+method,coefficient,p_value,primary_question
+Pearson,0.659666599833984,7.326970877394942e-5,Linear association
+Spearman,0.6558841932441019,8.32581032588416e-5,Monotonic rank association
