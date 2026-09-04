@@ -1,0 +1,5 @@
+dataset,mean_x,mean_y,variance_x,variance_y,correlation
+I,9,7.501,11,4.127,0.816
+II,9,7.501,11,4.128,0.816
+III,9,7.5,11,4.123,0.816
+IV,9,7.501,11,4.123,0.817

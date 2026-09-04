@@ -1,0 +1,5 @@
+dataset,visual_pattern,lesson
+I,Approximately linear relationship,A linear summary is reasonably compatible with the shape
+II,Clear curved / nonlinear relationship,Pearson correlation alone misses nonlinearity
+III,Mostly linear pattern with an influential outlier,One observation strongly affects the fitted relationship
+IV,"Most x values are identical, with one influential point",A single point can create an apparently strong linear summary
