@@ -1,0 +1,5 @@
+concept,interpretation
+Mean,Describes center but not spatial geometry
+Standard deviation,Describes spread but not the arrangement of points
+Pearson correlation,"Summarizes linear association, not arbitrary shape"
+Visualization,"Reveals structure, clusters, curves and influential observations"
