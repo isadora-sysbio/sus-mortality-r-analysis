@@ -1,0 +1,2 @@
+repetitions,confidence_level_percent,intervals_containing_mu,intervals_missing_mu,observed_coverage_percent,true_mu,z_critical,theoretical_se,margin_of_error
+500,95,482,18,96.4,26,1.96,0.4,0.784
