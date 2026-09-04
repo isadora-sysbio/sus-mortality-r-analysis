@@ -1,0 +1,7 @@
+principle,good_practice
+Bar baseline,Start quantitative bar axis at zero
+Bar height,Make bar height proportional to the value
+Axis units,Label the y-axis with %
+Title/context,"State measure, place and period clearly"
+Reference line,Use only when it adds interpretable context
+Color,Avoid decorative color when it carries no information
