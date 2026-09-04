@@ -1,0 +1,3 @@
+method,assumes_equal_variance,t_statistic,df,p_value
+Welch t test (default),FALSE,0,4.917034574439712,1
+Pooled-variance Student t test,TRUE,0,8,1

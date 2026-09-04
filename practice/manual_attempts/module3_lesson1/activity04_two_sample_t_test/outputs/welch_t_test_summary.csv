@@ -1,0 +1,2 @@
+mean_autoanalyzer,mean_microenzimatic,difference_auto_minus_micro,t_statistic,df,p_value,ci_lower,ci_upper,alpha,decision,interpretation
+200,200,0,0,4.917034574439712,1,-22.50919911291086,22.50919911291086,0.05,Do not reject H0,Insufficient evidence of a difference between mean cholesterol measurements

@@ -1,0 +1,2 @@
+estimated_mean_difference,ci_lower,ci_upper,zero_inside_95_ci,p_value,reject_at_0_05
+0,-22.50919911291086,22.50919911291086,TRUE,1,FALSE
