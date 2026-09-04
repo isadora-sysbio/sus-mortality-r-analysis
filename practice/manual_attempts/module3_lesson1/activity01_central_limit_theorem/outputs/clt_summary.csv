@@ -1,0 +1,4 @@
+sample_size,n,repetitions,theoretical_mean,mean_of_sample_means,mean_error,theoretical_se,empirical_se,se_ratio_empirical_to_theoretical
+n = 5,5,500,26,25.942,-0.058,11.628,11.902,1.024
+n = 30,30,500,26,26.234,0.234,4.747,4.97,1.047
+n = 100,100,500,26,26.05,0.05,2.6,2.423,0.932
