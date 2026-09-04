@@ -1,0 +1,4 @@
+comparison,mean_difference,ci_lower,ci_upper,adjusted_p_value,significant_0_05,interpretation
+Droga A-Placebo,12.358966227927064,9.500793366378712,15.217139089475417,2.9531932455029164e-14,TRUE,Evidence of a pairwise mean difference after Tukey adjustment
+Droga B-Placebo,17.025510013311084,14.167337151762732,19.883682874859435,2.9976021664879227e-15,TRUE,Evidence of a pairwise mean difference after Tukey adjustment
+Droga B-Droga A,4.66654378538402,1.808370923835668,7.524716646932372,4.842517175172034e-4,TRUE,Evidence of a pairwise mean difference after Tukey adjustment
