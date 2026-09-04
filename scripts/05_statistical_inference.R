@@ -1,0 +1,16 @@
+required <- c("dplyr", "ggplot2", "readr", "broom")
+missing <- required[!vapply(required, requireNamespace, logical(1), quietly = TRUE)]
+if (length(missing)) stop("Missing packages: ", paste(missing, collapse = ", "))
+suppressPackageStartupMessages({library(dplyr);library(ggplot2);library(readr);library(broom)})
+dir.create("results/tables",recursive=TRUE,showWarnings=FALSE);dir.create("results/figures",recursive=TRUE,showWarnings=FALSE)
+set.seed(3101); reps <- 500
+clt <- bind_rows(lapply(c(5,30,100), function(n) tibble(n=n, replicate=1:reps, sample_mean=replicate(reps, mean(rexp(n, rate=1/10))))))
+p_clt <- ggplot(clt,aes(sample_mean))+geom_histogram(bins=28,fill="#28666E",color="white")+facet_wrap(~n,scales="free_y")+labs(title="Sampling means approach normality",subtitle="500 samples from a skewed exponential population",x="Sample mean",y="Replicates",caption="Synthetic simulation; population mean = 10")+theme_minimal(base_size=11)
+ggsave("results/figures/central_limit_theorem.png",p_clt,width=9,height=4,dpi=240,bg="white")
+mu <- 120; n <- 35; ci <- bind_rows(lapply(1:reps,function(i){x<-rnorm(n,mu,18); tibble(replicate=i,mean=mean(x),lower=mean(x)-qt(.975,n-1)*sd(x)/sqrt(n),upper=mean(x)+qt(.975,n-1)*sd(x)/sqrt(n))})) %>% mutate(covers=lower<=mu & upper>=mu)
+write_csv(ci,"results/tables/confidence_interval_simulation.csv")
+set.seed(3102); one <- t.test(rnorm(40,126,15),mu=120); two_data <- tibble(group=rep(c("Standard","New"),each=45),value=c(rnorm(45,70,10),rnorm(45,75,10))); two <- t.test(value~group,data=two_data)
+anova_data <- tibble(treatment=rep(c("A","B","C"),each=40),outcome=c(rnorm(40,10,2),rnorm(40,12,2),rnorm(40,14,2))); fit <- aov(outcome~treatment,data=anova_data)
+tests <- bind_rows(tidy(one) %>% mutate(analysis="One-sample t test"), tidy(two) %>% mutate(analysis="Welch two-sample t test"), tidy(prop.test(60,200,p=.25)) %>% mutate(analysis="One-sample proportion test"))
+write_csv(tests,"results/tables/inference_tests.csv"); write_csv(tidy(TukeyHSD(fit)),"results/tables/anova_tukey.csv")
+cat(sprintf("Inference activities complete; empirical 95%% CI coverage: %.1f%%.\n",100*mean(ci$covers)))

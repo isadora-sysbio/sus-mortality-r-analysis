@@ -1,103 +1,56 @@
-# SUS Mortality Data Analysis in R
+# R and Epidemiology Portfolio for SUS Research
 
-A reproducible **descriptive epidemiology** project using R to explore
-mortality records derived from Brazil's **Sistema de Informações sobre
-Mortalidade (SIM)**.
+This cumulative portfolio develops reproducible R workflows for descriptive epidemiology, statistical inference, regression, clustered data, forecasting, and survival analysis. It grew from learning undertaken in the Campus Virtual Fiocruz course **Introdução à Análise de Dados para Pesquisa no SUS**, while the code, simulations, presentation, and interpretations here are independently organized and written.
 
-The project began as part of a study of data analysis for research in
-Brazil's Unified Health System (SUS) and extends introductory programming
-exercises into a structured analytical workflow.
+Official instructional files and raw educational datasets are not redistributed. Most examples use reproducibly generated synthetic data; the mortality workflow accepts a private local SIM-derived CSV.
 
-## Project focus
+## Skills map
 
-The analysis explores four descriptive questions:
+| Module | Portfolio coverage |
+|---|---|
+| 1 — Programming and R | SIM import/validation, age classification, dates, grouped summaries, integrated mortality questions |
+| 2 — Description and visualization | Variable types, location/dispersion, reusable summaries, Anscombe, honest scales, color and chart design |
+| 3 — Statistical modelling | CLT/CI simulation, t tests, proportions, ANOVA/Tukey, linear/logistic/multilevel models, ARIMA, Kaplan–Meier, log-rank, Cox |
 
-1. How are recorded deaths distributed across broad age groups?
-2. How does the number of recorded deaths vary throughout the year?
-3. What descriptive differences appear between male and female mortality records?
-4. How do mortality counts and mean age vary across quarters?
+The [activity inventory](docs/activity_inventory.md) maps all 32 explicit source-supported activities/cases to portfolio-safe implementations.
 
-## Analytical workflow
+## Representative examples
 
-The project demonstrates:
+![Central Limit Theorem simulation](results/figures/central_limit_theorem.png)
 
-- reproducible R analysis from the command line;
-- data import and validation;
-- data wrangling with `dplyr`;
-- date handling with `lubridate`;
-- grouped summaries;
-- descriptive epidemiology;
-- generation of derived tables;
-- data visualization with `ggplot2`;
-- separation of source data, code and outputs.
+Five hundred repeated samples show how sample size changes the distribution of means from a skewed population. This is a simulation result, not evidence about a real health population.
 
-## Visual summary
+![COVID-19 severity forest plot](results/figures/covid_severity_forest.png)
 
-### Mortality by age group
-
-![Recorded mortality by age group](results/figures/mortality_by_age_group.png)
-
-### Monthly distribution of recorded deaths
-
-![Monthly mortality](results/figures/monthly_mortality.png)
+The forest plot demonstrates adjusted logistic-regression reporting with odds ratios and 95% confidence intervals. The data are synthetic and associations must not be read causally.
 
 ## Repository structure
 
 ```text
-.
-├── README.md
-├── scripts/
-│   ├── 01_sim_mortality_analysis.R
-│   └── 02_visualize_results.R
-├── results/
-│   ├── tables/
-│   └── figures/
-└── docs/
-    └── analysis_notes.md
+scripts/   reproducible analyses grouped by method and course module
+results/   generated tables and portfolio-quality figures
+docs/      activity inventory, analysis notes, methods, reproducibility
 ```
 
-## Reproduce the analysis
+## Reproduce
 
-Run the analytical script with the path to a local copy of the dataset:
+Install the packages listed in [reproducibility notes](docs/reproducibility.md), then run from the repository root:
 
 ```bash
-Rscript scripts/01_sim_mortality_analysis.R \
-  /path/to/sim_dataset.csv \
-  results/tables
+for script in scripts/0{3..8}_*.R; do Rscript --vanilla "$script"; done
 ```
 
-Then regenerate the figures:
+The SIM workflow is intentionally separate because its input is not public:
 
 ```bash
-Rscript scripts/02_visualize_results.R
+Rscript --vanilla scripts/01_sim_mortality_analysis.R /path/to/local_sim.csv results/tables
+Rscript --vanilla scripts/02_visualize_results.R
 ```
 
-## Data and interpretation
+## Interpretation and limitations
 
-Raw educational data are not redistributed in this repository.
+Generated examples demonstrate analytical techniques rather than population findings. Counts are not rates without denominators; odds ratios are not risk ratios; model fit does not establish causality; observational associations may reflect confounding, selection, or measurement error. See [methods notes](docs/methods_notes.md) and [analysis notes](docs/analysis_notes.md).
 
-The analysis uses mortality records derived from the Brazilian
-**Sistema de Informações sobre Mortalidade (SIM)** and provided through
-Campus Virtual Fiocruz learning materials.
+## Learning source
 
-The outputs presented here are **descriptive counts and summaries**.
-They should not automatically be interpreted as population mortality
-rates. Rate-based epidemiological comparisons require suitable
-population denominators and additional methodological considerations.
-
-## Educational context
-
-This project was developed while completing:
-
-**Introdução à Análise de Dados para Pesquisa no SUS**  
-**Campus Virtual Fiocruz**
-
-The course introduces programming and data-analysis concepts using
-Brazilian health-system data.
-
-This repository extends those exercises into an independently organized,
-reproducible descriptive epidemiology workflow.
-
-Official course repository:
-
-https://github.com/CampusVirtualFiocruz/curso-analise-de-dados
+Learning inspiration and topic sequence: Campus Virtual Fiocruz, **Introdução à Análise de Dados para Pesquisa no SUS**. The [official course repository](https://github.com/CampusVirtualFiocruz/curso-analise-de-dados) remains the authoritative source for course materials.

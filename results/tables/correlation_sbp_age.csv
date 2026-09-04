@@ -1,0 +1,2 @@
+estimate,statistic,p.value,parameter,conf.low,conf.high,method,alternative
+0.7216271701881206,16.74324967378902,4.254811501341989e-43,258,0.6577132211299076,0.7752249317956966,Pearson's product-moment correlation,two.sided

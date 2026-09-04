@@ -1,0 +1,10 @@
+required<-c("dplyr","ggplot2","readr","broom");missing<-required[!vapply(required,requireNamespace,logical(1),quietly=TRUE)];if(length(missing))stop("Missing packages: ",paste(missing,collapse=", "))
+suppressPackageStartupMessages({library(dplyr);library(ggplot2);library(readr);library(broom)})
+dir.create("results/tables",recursive=TRUE,showWarnings=FALSE);dir.create("results/figures",recursive=TRUE,showWarnings=FALSE);set.seed(3202);n<-260
+d<-tibble(age=round(runif(n,25,80)),sex=factor(sample(c("Female","Male"),n,TRUE)),bmi=rnorm(n,27,4)) %>% mutate(sbp=88+.62*age+.45*bmi+5*(sex=="Male")+rnorm(n,0,10),hypertension=rbinom(n,1,plogis(-7+.055*age+.075*bmi+.35*(sex=="Male"))))
+correlation<-cor.test(d$sbp,d$age);simple<-lm(sbp~age,d);multiple<-lm(sbp~age+bmi+sex,d);logistic<-glm(hypertension~age+bmi+sex,d,family=binomial())
+write_csv(tidy(correlation),"results/tables/correlation_sbp_age.csv");write_csv(tidy(simple,conf.int=TRUE),"results/tables/simple_regression.csv");write_csv(tidy(multiple,conf.int=TRUE),"results/tables/multiple_regression.csv");write_csv(tidy(logistic,conf.int=TRUE,exponentiate=TRUE),"results/tables/logistic_odds_ratios.csv")
+new<-expand.grid(age=seq(25,80,1),bmi=27,sex=factor("Female",levels=levels(d$sex)));new$probability<-predict(logistic,new,type="response");write_csv(new,"results/tables/logistic_predictions.csv")
+png("results/figures/linear_model_diagnostics.png",width=1800,height=1600,res=220);par(mfrow=c(2,2));plot(simple);dev.off()
+p<-ggplot(d,aes(age,sbp,color=sex))+geom_point(alpha=.45)+geom_smooth(method="lm",se=TRUE)+labs(title="Systolic blood pressure and age",subtitle="Association in synthetic observations; not a causal estimate",x="Age (years)",y="SBP (mmHg)",caption="Synthetic educational data")+theme_minimal(base_size=12)+scale_color_manual(values=c("#B24C63","#28666E"))
+ggsave("results/figures/sbp_age_regression.png",p,width=8,height=5,dpi=240,bg="white");cat("Regression activities complete: correlation, simple/multiple linear models, logistic OR/CI/prediction, diagnostics.\n")
