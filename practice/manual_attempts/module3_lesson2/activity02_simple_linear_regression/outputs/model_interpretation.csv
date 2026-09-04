@@ -1,0 +1,4 @@
+quantity,estimate,interpretation
+Intercept,102.17297174603864,Predicted SBP when age = 0; mathematically required but not clinically meaningful here
+Age slope,0.6996476361356706,Expected SBP change per additional year of age: 0.7 mmHg
+R-squared,0.43516002293652944,43.5% of observed SBP variance is explained by age in this fitted model
