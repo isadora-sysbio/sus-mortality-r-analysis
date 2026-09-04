@@ -1,0 +1,6 @@
+quantile,probability,birth_weight_g
+P10,0.1,2697.5
+Q1 / P25,0.25,2993.75
+Median / P50,0.5,3277.5
+Q3 / P75,0.75,3526.25
+P90,0.9,3725.5
