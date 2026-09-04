@@ -1,0 +1,4 @@
+term,odds_ratio,conf_low,conf_high,p_value,interpretation
+idade,1.0065323022926433,0.9581479412264083,1.0573599670441018,0.7955998042555279,"Multiplicative change in odds for each additional year of age, adjusted for BMI and sex"
+imc,1.3692725181259955,1.14550457833559,1.6367522787375774,5.560716447232224e-4,"Multiplicative change in odds for each 1-unit increase in BMI, adjusted for age and sex"
+sexoMasculino,4.4554077746308165,1.3071425500063039,15.186299641263295,0.01693554937960992,Male-vs-female odds ratio adjusted for age and BMI
