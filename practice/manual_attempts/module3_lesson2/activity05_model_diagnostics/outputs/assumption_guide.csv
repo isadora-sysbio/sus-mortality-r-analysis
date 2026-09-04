@@ -1,0 +1,5 @@
+assumption,diagnostic,desirable_pattern
+Linearity,Residuals vs Fitted,No systematic curve
+Residual Normality,Normal Q-Q,Points approximately follow the diagonal
+Homoscedasticity,Residuals vs Fitted + Scale-Location,No strong funnel/change in spread
+Independence,Primarily determined by study design,Observations not structurally dependent

@@ -1,0 +1,4 @@
+diagnostic,heuristic,threshold,note
+Cook's distance,4/n,0.13333333333333333,"Screening heuristic, not an automatic deletion rule"
+Leverage,2p/n,0.13333333333333333,"Screening heuristic, not an automatic deletion rule"
+Absolute standardized residual,> 2,2,Large residual flag for closer inspection
