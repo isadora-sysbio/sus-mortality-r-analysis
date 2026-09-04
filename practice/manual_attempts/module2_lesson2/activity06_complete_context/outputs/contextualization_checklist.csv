@@ -1,0 +1,8 @@
+element,purpose,present
+Title,States the main subject of the figure,TRUE
+Subtitle,Adds sample/context information,TRUE
+X-axis label,Names the measured variable and its unit,TRUE
+Y-axis label,Explains what bar height represents,TRUE
+Reference line,Highlights a meaningful benchmark/statistic,TRUE
+Annotation,Makes the reference line interpretable,TRUE
+Caption/source,Documents where the data came from,TRUE
